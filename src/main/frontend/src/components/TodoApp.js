@@ -33,7 +33,7 @@ const TodoApp = () => {
   const toggleTodo = async (id) => {
     try {
       const todo = todos.find(t => t.id === id);
-      await axios.put('/task/isComplete', { id, isCompleted: !todo.isCompleted });
+      await axios.put('/task/isComplete', { id, isCompleted: !todo.completed });
       fetchTasks();
     } catch (error) {
       console.error('Error toggling task', error);

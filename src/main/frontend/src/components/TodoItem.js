@@ -21,7 +21,7 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo, updateTodo }) => {
       <div>
         <input
           type="checkbox"
-          checked={todo.isCompleted}
+          checked={todo.completed}
           onChange={() => toggleTodo(todo.id)}
         />
         {isEditing ? (
@@ -32,7 +32,7 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo, updateTodo }) => {
             onKeyDown={handleKeyDown}
           />
         ) : (
-          <span className={todo.isCompleted ? 'completed-text' : ''}>
+          <span className={todo.completed ? 'completed-text' : ''}>
             {todo.name}
           </span>
         )}

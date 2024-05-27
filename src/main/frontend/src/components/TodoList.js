@@ -2,7 +2,7 @@ import React from 'react';
 import TodoItem from './TodoItem';
 
 const TodoList = ({ todos, toggleTodo, deleteTodo, updateTodo }) => {
-  const sortedTodos = [...todos].sort((a, b) => a.isComplete - b.isComplete);
+  const sortedTodos = [...todos].sort((a, b) => a.completed - b.completed);
 
   return (
     <ul>
